@@ -1,0 +1,46 @@
+As of PHP 5.5.0 mysql_real_escape_string and the mysql extension are deprecated. Please use mysqli extension and mysqli::escape_string function instead
+
+To use the parameterized query, you need to use MySQLi rather than the MySQL functions. To rewrite your example, we would need something like the following.
+
+<?php
+    $mysqli = new mysqli("server", "username", "password", "database_name");
+
+    // TODO - Check that connection was successful.
+
+    $unsafe_variable = $_POST["user-input"];
+
+    $stmt = $mysqli->prepare("INSERT INTO table (column) VALUES (?)");
+
+    // TODO check that $stmt creation succeeded
+
+    // "s" means the database expects a string
+    $stmt->bind_param("s", $unsafe_variable);
+
+    $stmt->execute();
+
+    $stmt->close();
+
+    $mysqli->close();
+?>
+
+
+Using PDO (for any supported database driver):
+
+$stmt = $pdo->prepare('SELECT * FROM employees WHERE name = :name');
+
+$stmt->execute(array('name' => $name));
+
+foreach ($stmt as $row) {
+    // do something with $row
+}
+Using MySQLi (for MySQL):
+
+$stmt = $dbConnection->prepare('SELECT * FROM employees WHERE name = ?');
+$stmt->bind_param('s', $name);
+
+$stmt->execute();
+
+$result = $stmt->get_result();
+while ($row = $result->fetch_assoc()) {
+    // do something with $row
+}

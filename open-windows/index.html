@@ -1,0 +1,33 @@
+<script language="JavaScript">
+
+function goNewWin() {
+
+// Set height and width
+var NewWinHeight=200;
+var NewWinWidth=200;
+
+// Place the window
+var NewWinPutX=10;
+var NewWinPutY=10;
+
+//Get what is below onto one line
+
+TheNewWin =window.open("untitled.html",'TheNewpop','fullscreen=yes,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,titlebar=0,resizable=no'); 
+
+//Get what is above onto one line
+
+TheNewWin.resizeTo(NewWinHeight,NewWinWidth);
+TheNewWin.moveTo(NewWinPutX,NewWinPutY);
+
+}
+</script>
+<CENTER>
+<FORM>
+<input type="button" VALUE="click me!" onClick="goNewWin()">
+</FORM>
+</CENTER>
+<button onclick="window.open('/pageaddress.html','winname',"directories=0,titlebar=0,toolbar=0,location=0,status=0,menubar=0,scrollbars=no,resizable=no,width=400,height=350");">ello</button>
+
+
+<input type="button" value="yes click me" class="button-2 email-a-friend-button" 
+onclick="javascript:window.open('@Url.RouteUrl("ProductEmailAFriend", new { productId = Model.ProductId })', 800, 800, true); return false;" />

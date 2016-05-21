@@ -1,0 +1,62 @@
+#status-msg-err{
+    border-radius: 10px;
+    width: 100%;
+	height: 40px;
+	color: 	#FFFFFF;
+    text-align: left;
+	padding: 10px;
+	font-size: 15px;
+    background-color: #FF0000;
+    margin-top: 20px;
+
+     animation:status-msg-err 7.5s 1;
+    -webkit-animation:status-msg-err 7.5s 1;
+    animation-fill-mode: forwards;
+
+    animation-delay:20s;
+    -webkit-animation-delay:10s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+
+} 
+
+@keyframes status-msg-err{
+    from {opacity :1;}
+    to {opacity :0;}
+}
+
+@-webkit-keyframes status-msg-err{
+    from {opacity :1;}
+    to {opacity :0;}
+}
+
+#status-msg{
+	
+    border-radius: 10px;
+    width: 100%;
+	height: 40px;
+	color: 	#FFFFFF;
+    text-align: left;
+	padding: 10px;
+	font-size: 15px;
+    background-color: #3CB371;
+    margin-top: 20px;
+
+     animation:status-msg 0.5s 1;
+    -webkit-animation:status-msg 0.5s 1;
+    animation-fill-mode: forwards;
+
+    animation-delay:2s;
+    -webkit-animation-delay:1s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+
+} 
+
+@keyframes status-msg{
+    from {opacity :1;}
+    to {opacity :0;}
+}
+
+@-webkit-keyframes status-msg{
+    from {opacity :1;}
+    to {opacity :0;}
+}

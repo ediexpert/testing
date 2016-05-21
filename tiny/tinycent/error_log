@@ -1,0 +1,2 @@
+[15-Sep-2015 07:49:38 UTC] PHP Fatal error:  Cannot redeclare limit_words() (previously declared in /home/naveen806/public_html/tinycent/publicblog.php:64) in /home/naveen806/public_html/tinycent/publicblog.php on line 64
+[22-Sep-2015 11:01:12 UTC] PHP Fatal error:  Cannot redeclare limit_words() (previously declared in /home/naveen806/public_html/tinycent/demo.php:4) in /home/naveen806/public_html/tinycent/demo.php on line 107

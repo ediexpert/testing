@@ -1,0 +1,72 @@
+<html>
+   <head>
+      <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+      <script type="text/javascript">
+         <!--
+            function WriteCookie()
+            {
+               if( document.myform.customer.value == "" ){
+                  alert("Enter some value!");
+                  return;
+               }
+               cookievalue= escape(document.myform.customer.value) + ";";
+               document.cookie="name=" + cookievalue;
+               document.write ("Setting Cookies : " + "name=" + cookievalue );
+            }
+			function ReadCookie()
+            {
+               var allcookies = document.cookie;
+               document.write ("All Cookies : " + allcookies );
+               
+               // Get all the cookies pairs in an array
+               cookiearray = allcookies.split(';');
+               
+               // Now take key value pair out of this array
+               for(var i=0; i<cookiearray.length; i++){
+                  name = cookiearray[i].split('=')[0];
+                  value = cookiearray[i].split('=')[1];
+                  document.write ("Key is : " + name + " and Value is : " + value);
+               }
+            }
+         //-->
+		 
+		 
+      </script>
+      
+   </head>
+   
+   <body>
+<div class="moveAble" id="movable">
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- usermy_blog_right 1 -->
+              <ins class="adsbygoogle adslot_1"
+				id="movable"
+                   style="display:block"
+                   data-ad-client="ca-pub-4192276482554399"
+                   data-ad-slot="4412000668"
+                   data-ad-format="auto"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+			  
+</div>
+			  
+   
+      <form name="myform" action="">
+         Enter name: <input type="text" name="customer"/>
+         <input type="button" value="Set Cookie" onclick="WriteCookie();"/>
+      </form>
+    <form name="myform1" action="">
+         <p> click the following button and see the result:</p>
+         <input type="button" value="Get Cookie" onclick="ReadCookie()"/>
+      </form>
+   </body>
+</html>
+<script>
+$(document).ready(function(){
+  var $moveable = $('#movable');
+  $(document).mousemove(function(e){
+      $moveable.css({'top': e.pageY,'left': e.pageX});
+  });
+});
+</script>
